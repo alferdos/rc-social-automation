@@ -1,0 +1,968 @@
+[
+  {
+    "name": "Azure Qassim Compound",
+    "slug": "palma-village-qassim",
+    "city": "Al Qaseem",
+    "city_slug": "al-qaseem",
+    "url": "https://rightcompound.com/compounds/al-qaseem/palma-village-qassim",
+    "description": "Azzure  Qassim Compound, located 325 km north of Riyadh in Buraydah, Qassim Province, is a newly-built residential community.  Azzure Qassim Commun...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/307/a2b45857d3324443bd8c79825f7ca932.jpeg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "Restaurant",
+      "24/7 Security",
+      "Parking"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "price": ""
+  },
+  {
+    "name": "Dur Communities Jeddah  \"Dur Al Rawdah Compound/Dur Al Andalus Compound / Dur Al Yasmine Compound \"",
+    "slug": "dur-alrawdah-compound",
+    "city": "Jeddah",
+    "city_slug": "jeddah",
+    "url": "https://rightcompound.com/compounds/jeddah/dur-alrawdah-compound",
+    "description": "Dur Communities Jeddah offer different scales of compounds in order to meet different accommodation needs of different affordable budgets. This includes two ...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/391/dc8a42444a124977b6217e9c6cff8bff.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "Restaurant",
+      "Parking",
+      "Maintenance"
+    ],
+    "bedrooms": [
+      4
+    ],
+    "price": ""
+  },
+  {
+    "name": "Kindi Housing Compound Jeddah",
+    "slug": "kindi-housing-compound",
+    "city": "Jeddah",
+    "city_slug": "jeddah",
+    "url": "https://rightcompound.com/compounds/jeddah/kindi-housing-compound",
+    "description": "Kindi Housing Compound located in Rabwah district  , east of Sitteen Street, near the junction with Hera'a Street, provides high quality, furnished one,...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/298/fafd8ae715f04dda8a5acb173986698a.JPG",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "Parking",
+      "Maintenance",
+      "Sauna"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Meral Oasis Compound Jeddah",
+    "slug": "meral-oasis-compound-568",
+    "city": "Jeddah",
+    "city_slug": "jeddah",
+    "url": "https://rightcompound.com/compounds/jeddah/meral-oasis-compound-568",
+    "description": "Nestled in the heart of Al Rawdah district Our beautifully renovated units are part of a limited selection of properties available at exceptional value. The ...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/568/7ac05f46c44946e6b994eb54ed85510a.jpeg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Kids Play Area",
+      "Restaurant",
+      "24/7 Security",
+      "Maintenance",
+      "Housekeeping"
+    ],
+    "bedrooms": [
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Mura Bustan Compounds",
+    "slug": "mura-bustan-compounds",
+    "city": "Jeddah",
+    "city_slug": "jeddah",
+    "url": "https://rightcompound.com/compounds/jeddah/mura-bustan-compounds",
+    "description": "Finest Luxury Compounds in Jeddah The splendor of greenery surrounds sparkling pools while balmy breezes caress you as you discover your new home in Jeddah. ...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/297/8525f1ee5b5f4f5d83f743d7189fb962.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "Kids Day Care",
+      "Restaurant",
+      "Parking"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "price": ""
+  },
+  {
+    "name": "Al Ansari Compound Two Al Khobar",
+    "slug": "al-ansari-compound-2",
+    "city": "Al Khobar",
+    "city_slug": "khobar",
+    "url": "https://rightcompound.com/compounds/khobar/al-ansari-compound-2",
+    "description": "Al Ansari Compound Two, an 86 units compound, under the management of Abyan Real Estate   Company, located in the center of Al Khobar, a strategic locat...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/380/f3d59324e10341feb60a639020da3008.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "Restaurant",
+      "24/7 Security",
+      "Parking"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Al Ansari Compound One Al Khobar",
+    "slug": "al-ansary-compound",
+    "city": "Al Khobar",
+    "city_slug": "khobar",
+    "url": "https://rightcompound.com/compounds/khobar/al-ansary-compound",
+    "description": "Al Ansari Compound One , under the management of Abyan Real Estate Company ,  is situated in the heart of Al Khobar City , located in a strategic locati...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/292/1967e0f224f34c15a38a789e92b3d5a8.JPG",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "Kids Day Care",
+      "24/7 Security",
+      "Parking"
+    ],
+    "bedrooms": [
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Al Falak Compound Al Khobar",
+    "slug": "al-falak-compound",
+    "city": "Al Khobar",
+    "city_slug": "khobar",
+    "url": "https://rightcompound.com/compounds/khobar/al-falak-compound",
+    "description": "Al Falak Compound offers a variety of rental options to suit different lifestyles, accommodation needs ,  and family sizes. Here's a quick overview...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/578/19641d736cd343d28231657b86d2913b.jpeg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "24/7 Security",
+      "Parking",
+      "Maintenance"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "price": ""
+  },
+  {
+    "name": "Al Rashid Residence Towers",
+    "slug": "al-rashid-residence-towers",
+    "city": "Al Khobar",
+    "city_slug": "khobar",
+    "url": "https://rightcompound.com/compounds/khobar/al-rashid-residence-towers",
+    "description": "Al Rashid Residence Towers is a prestigious luxurious deluxe residential project under Al Rashid Trading and Contracting Company located west of Al Khobar ci...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/1_636003611236410910.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "Restaurant",
+      "Parking",
+      "Maintenance"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "price": ""
+  },
+  {
+    "name": "Al Rawabi Pearl Complex",
+    "slug": "al-rawabi-pearl-complex",
+    "city": "Al Khobar",
+    "city_slug": "khobar",
+    "url": "https://rightcompound.com/compounds/khobar/al-rawabi-pearl-complex",
+    "description": "Rawabi Pearl is a luxurious stylish residential complex offering residential units of three types, one-bedroom apartment, two-bedroom apartment, and three-be...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/Profile_Picture_636446112763863267.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "Kids Day Care",
+      "24/7 Security",
+      "Parking"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Black Pearl Residential Compound",
+    "slug": "black-pearl-residential-compound",
+    "city": "Al Khobar",
+    "city_slug": "khobar",
+    "url": "https://rightcompound.com/compounds/khobar/black-pearl-residential-compound",
+    "description": "BLACK PEARL RESIDENTIAL COMPOUND is a brand new established residential compound characterized by its state-of-the art and high quality finished environment....",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/464/7b5b3b5cb97f46c79e7adb29b1abaf61.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "Kids Day Care",
+      "Restaurant",
+      "24/7 Security"
+    ],
+    "bedrooms": [
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Al Danah & Al Nadah Compounds",
+    "slug": "dana--nada-compounds",
+    "city": "Al Khobar",
+    "city_slug": "khobar",
+    "url": "https://rightcompound.com/compounds/khobar/dana--nada-compounds",
+    "description": "Al NADAH COMPOUND : An approximately 124000sqm land, Al Nadah compound situated at the heart of Al-Khobar consists of 128 villas out of those 100 villas are ...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/DSCN0336_636223937913438041.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "Restaurant",
+      "Sauna",
+      "Jacuzzi"
+    ],
+    "bedrooms": [
+      3,
+      4
+    ],
+    "price": ""
+  },
+  {
+    "name": "Marissa Elite Compound Dhahran Al Khobar",
+    "slug": "marissa-elite-compound-dhahran",
+    "city": "Al Khobar",
+    "city_slug": "khobar",
+    "url": "https://rightcompound.com/compounds/khobar/marissa-elite-compound-dhahran",
+    "description": "Marissa Elite Complex is a newly constructed modern residential secured gated residential complex in the prestigious Dhahran area, Al Khobar, with easy acces...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/538/de1a150d6b3841aab7a3b75f069c96f5.jpg",
+    "amenities": [
+      "Gym",
+      "Kids Play Area",
+      "Kids Day Care",
+      "Restaurant",
+      "24/7 Security",
+      "Parking",
+      "Maintenance",
+      "Rooftop"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Palm Springs Compound",
+    "slug": "palm-springs-compound",
+    "city": "Al Khobar",
+    "city_slug": "khobar",
+    "url": "https://rightcompound.com/compounds/khobar/palm-springs-compound",
+    "description": "Palm Springs Compound is a newly constructed modern residential secured gated community, one of Abdulla Fouad Holding Company’s new innovations in Al Khobar ...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/Palm_Springs_Compound_2_636200838051643510.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "Kids Day Care",
+      "Restaurant",
+      "24/7 Security"
+    ],
+    "bedrooms": [
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "The Pearl Residential Compound",
+    "slug": "the-pearl-residential-compound",
+    "city": "Al Khobar",
+    "city_slug": "khobar",
+    "url": "https://rightcompound.com/compounds/khobar/the-pearl-residential-compound",
+    "description": "The Pearl Residential Compound, a newly constructed gated secured compound offering 233 units of different types in order to meet different accommodation nee...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/422/af2f504123c846cfa8352bfb1aa65419.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "Kids Day Care",
+      "Supermarket",
+      "Restaurant"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Zamil Village Residential Compound (Al Khobar)",
+    "slug": "zamil-village-al-khobar",
+    "city": "Al Khobar",
+    "city_slug": "khobar",
+    "url": "https://rightcompound.com/compounds/khobar/zamil-village-al-khobar",
+    "description": "Zamil Village is a Premier residential compound situated in Al Khobar Eastern Province and just 20 minutes from the Bahrain Causeway. The village is designed...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/433/3055c9b9107843efbdfbcb74e795fa63.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "Kids Day Care",
+      "Supermarket",
+      "Restaurant"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Azure Alreem Compound Riyadh",
+    "slug": "al-reem-residences-compound",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/al-reem-residences-compound",
+    "description": "VR Tour Available, Walk through our Show Units Now:  Duplex Villa Click here Townhouse Click here Duplex Apartment Click here 3 Bedroom Apartment Click ...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/423/923e3f32a7b544cca5e97f43b5587a17.jpeg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "Kids Day Care",
+      "Restaurant",
+      "24/7 Security"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "price": ""
+  },
+  {
+    "name": "Arcadia Residential Compounds",
+    "slug": "arcadia-residential-compounds",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/arcadia-residential-compounds",
+    "description": "-  Arcadia Residential Compound is one of the most convenient residential compounds for the business and family accommodation in Riyadh. ...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/458/f152afec684045109064c86599156bba.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Kids Play Area",
+      "Kids Day Care",
+      "Restaurant",
+      "Maintenance",
+      "Sauna"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Array Suites Olaya",
+    "slug": "array-suites-olaya",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/array-suites-olaya",
+    "description": "Array Suites has been developed to redefine hospitality living with a luxury residential offering and iconic hospitality service through its serviced studios...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/519/fe939ae1326445ffb30e9394726aa5bd.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Restaurant",
+      "Parking",
+      "Maintenance",
+      "Housekeeping",
+      "Laundry",
+      "Concierge"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Azure Lamara Residential Compound Riyadh",
+    "slug": "azure-lamara-residential-compound-riyadh-580",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/azure-lamara-residential-compound-riyadh-580",
+    "description": "Azure is a premiere lifestyle experience provider, renowned for its exquisite collection of gated communities in Riyadh, offering a blend of luxurious villas...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/580/1772e32d37c34ad6913737239b208572.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "Restaurant",
+      "24/7 Security",
+      "Parking"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Cecil Residential Compound Riyadh",
+    "slug": "cecil-residential-compound-riyadh",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/cecil-residential-compound-riyadh",
+    "description": "Cecil Compound features a total of 54 residential units, offering a blend of upscale living, lush green spaces, and a comfortable environment, making it the ...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/565/5a3531373374447ea51b497c82cf934e.jpeg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Kids Play Area",
+      "Supermarket",
+      "Restaurant",
+      "24/7 Security",
+      "Parking",
+      "Maintenance"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Dara Village Compound",
+    "slug": "dara-village-584",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/dara-village-584",
+    "description": "Dara Village Compound: An Elite Integrated Community The best residential complex in Riyadh, Dara Village provides families, professionals, and foreigners wi...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/584/3eb9d609829f44c594e175865d267fc0.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Padel Court",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "Restaurant",
+      "Mosque"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Dur Al Hada Compound Dq",
+    "slug": "dur-al-hada-compound",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/dur-al-hada-compound",
+    "description": "Experience Luxury Living at Dur Al Hada Compound Villas. Dur Al Hada Compound Villas represent the pinnacle of refined living, designed to deliver exceptiona...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/527/148dbbca4640465d9dd88f649a17dc37.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Basketball Court",
+      "Kids Play Area",
+      "Restaurant",
+      "24/7 Security",
+      "Parking",
+      "Maintenance"
+    ],
+    "bedrooms": [
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Flow Granada Compound Riyadh",
+    "slug": "flow-granada-compound-riyadh",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/flow-granada-compound-riyadh",
+    "description": "Flow Granada – A Walkable, Luxury Compound in Riyadh’s Best Location Discover Flow Granada, a modern compound in Riyadh designed for residents who value life...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/587/b1badfc170f64026b9d3d0d0aba3acb4.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Kids Play Area",
+      "Kids Day Care",
+      "Restaurant",
+      "Parking",
+      "Maintenance"
+    ],
+    "bedrooms": [
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Azure Rabwah Compound",
+    "slug": "green-diamond-compound",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/green-diamond-compound",
+    "description": "Azure-Al Rabwah Compound  is a newly constructed gated secured compound offering 96 units of different types in order to meet different accommodati...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/463/8312a009b5b64da69c245c5b027787fc.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "Kids Day Care",
+      "Supermarket",
+      "Parking"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "price": ""
+  },
+  {
+    "name": "Azure Hittin Residential Compound",
+    "slug": "hittin-residential-compound-riyadh",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/hittin-residential-compound-riyadh",
+    "description": "Azure Hittin Residential Compound   is a luxurious brand new residential compound in North of Riyadh. It consists of 406 units divided between 28 b...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/540/5e320b5384e34fcda4c01c8d1587a3cf.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Basketball Court",
+      "Kids Play Area",
+      "Supermarket",
+      "Mosque",
+      "Parking",
+      "Maintenance"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Azure Palma Ii Villas Compound Riyadh",
+    "slug": "la-palma-villas-riyadh",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/la-palma-villas-riyadh",
+    "description": "Azure-Al Arid  Villas Compound Riyadh  is a prestigious residential community situated in the Al-Arid district, its eye-catching beauty north ...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/511/238dc7c9b2f945f58c4ee81b0b1ce4d4.jpeg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Basketball Court",
+      "Kids Play Area",
+      "Kids Day Care",
+      "Restaurant",
+      "Parking",
+      "Maintenance"
+    ],
+    "bedrooms": [
+      4
+    ],
+    "price": ""
+  },
+  {
+    "name": "Levels Compound",
+    "slug": "levels",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/levels",
+    "description": "It is with our great pleasure to introduce an unique residential project that is located in the heart of Riyadh city.. (Levels ) Residential Resort is a gath...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/468/09191c6cb7284edba3590cb23f20f04c.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Kids Play Area",
+      "Kids Day Care",
+      "Restaurant",
+      "24/7 Security",
+      "Parking"
+    ],
+    "bedrooms": [
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Azure Narjis Residential Complex Riyadh",
+    "slug": "one11-residential-complex-riyadh",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/one11-residential-complex-riyadh",
+    "description": "Azure-Al Narjis Residential Complex Riyadh    ,  is a newly constructed modern residential secured gated residential complex located in Al Nar...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/541/866a1e9b46694abfb0be6c9712085801.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "24/7 Security",
+      "Parking",
+      "Maintenance",
+      "Housekeeping",
+      "Sauna"
+    ],
+    "bedrooms": [
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Satel At Opal Residential Compound Riyadh",
+    "slug": "opal-residential-compound-576",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/opal-residential-compound-576",
+    "description": "Satel at Opal – Gated Family Compound | Al Narjis Opal is a gated residential compound in Al Narjis, offering both furnished and unfurnished, two or three be...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/576/ce3aa0490b954204810017b3f1725d9f.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Mosque",
+      "24/7 Security",
+      "Parking",
+      "Maintenance",
+      "Sauna",
+      "Garden"
+    ],
+    "bedrooms": [
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Palms Estate Compound",
+    "slug": "palms-estate-compound",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/palms-estate-compound",
+    "description": "Palms Estate Compound, a 113 units compound, is located in the modern and prestigious Al Khuzama district in the north western part of Riyadh very near to Di...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/338/015e725d4a124a14b2360ff5703276f4.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Padel Court",
+      "Kids Play Area",
+      "Kids Day Care",
+      "Restaurant",
+      "24/7 Security",
+      "Maintenance"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Rilam Al Raed Residential Compound Riyadh",
+    "slug": "rilam-al-raed-residential-compound",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/rilam-al-raed-residential-compound",
+    "description": "Conveniently located in North-West Riyadh, Rilam-Al Raed’s 54 apartments offer spacious,   comfortable units with all of the modern amenities and t...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/533/a8cad85918224f4db46d438ac18f48a0.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Restaurant",
+      "Parking",
+      "Maintenance",
+      "Laundry",
+      "Garden"
+    ],
+    "bedrooms": [
+      1,
+      2
+    ],
+    "price": ""
+  },
+  {
+    "name": "Riyadh Central Compound",
+    "slug": "riyadh-central",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/riyadh-central",
+    "description": "Elevate Your Lifestyle at Riyadh Central in Al Murabba, Riyadh ·       Sky Swimming Pool : Experience serenity with breathtaking views from ou...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/535/fa71f435b0cd4e55b01d856180493658.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Kids Play Area",
+      "Supermarket",
+      "Parking",
+      "Maintenance",
+      "Housekeeping",
+      "Rooftop"
+    ],
+    "bedrooms": [
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Satel At Creative Hospitality Compound",
+    "slug": "satel-at-creative-hospitality",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/satel-at-creative-hospitality",
+    "description": "Satel at Creative Hospitality Compound is an upscale residential compound situated in the Al Nakheel District, offering spacious three-bedroom, two-stor...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/582/b7165f4c9de04c24a87b9a16e905fc01.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Tennis Court",
+      "Restaurant",
+      "Parking",
+      "Maintenance",
+      "Laundry",
+      "Garden"
+    ],
+    "bedrooms": [
+      2,
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "Satel At La Brise Compound Riyadh",
+    "slug": "satel-at-la-brise-compound-riyadh",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/satel-at-la-brise-compound-riyadh",
+    "description": "Satel La Brise La Brise compound is a residential compound located right in Malaz district in the center of Riyadh. The location is super convenient, with ea...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/574/b2181d21b3c54179b49505a989b0b73e.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Kids Play Area",
+      "Kids Day Care",
+      "Supermarket",
+      "24/7 Security",
+      "Parking"
+    ],
+    "bedrooms": [
+      1,
+      2
+    ],
+    "price": ""
+  },
+  {
+    "name": "Satel At La Cordia Suites Compound  Riyadh",
+    "slug": "satel-at-la-cordia-suites-compound-riyadh",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/satel-at-la-cordia-suites-compound-riyadh",
+    "description": "Satel at La Cordia Suites – Residential Living with Hotel-Level Standards Offering flexible payment plans (Monthly)  Lease terms starting from a minimum...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/583/348d3689cd81418d8a5f890d22efad38.jpg",
+    "amenities": [
+      "Gym",
+      "Parking",
+      "Maintenance",
+      "Housekeeping"
+    ],
+    "bedrooms": [
+      1,
+      2
+    ],
+    "price": ""
+  },
+  {
+    "name": "Satel At Rafilla Compound Riyadh",
+    "slug": "satel-at-rafilla-compound-riyadh",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/satel-at-rafilla-compound-riyadh",
+    "description": "Satel Alrafiaa Compound | The Art of Executive Living in Riyadh Tailored Residential Solutions: Fully Furnished & Unfurnished Premium Villas. Ideally pos...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/585/efb9f039ca284889896cceee27fde71c.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Kids Play Area",
+      "Restaurant",
+      "Parking",
+      "Maintenance",
+      "Rooftop"
+    ],
+    "bedrooms": [
+      3
+    ],
+    "price": ""
+  },
+  {
+    "name": "The Residence Olaya Compound Riyadh",
+    "slug": "the-residence",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/the-residence",
+    "description": "The Residence Riyadh is located in Olaya district. front of Kingdom Tower, offers Gym 24/7, Speed Wi-Fi, Security 24/7 CCTV cameras, Maintenance 24/7, Cleani...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/499/e94e454739ef4dcb8ebee605c89fdba7.jpg",
+    "amenities": [
+      "Gym",
+      "Restaurant",
+      "Parking",
+      "Maintenance",
+      "Barbecue Area"
+    ],
+    "bedrooms": [],
+    "price": ""
+  },
+  {
+    "name": "Vives Compound",
+    "slug": "vives-compound",
+    "city": "Riyadh",
+    "city_slug": "riyadh",
+    "url": "https://rightcompound.com/compounds/riyadh/vives-compound",
+    "description": "Vives Compound is a high-end residential, western style compound, built on the highest standards with one thing in mind, the comfort of its tenants. Amenitie...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/472/27ae454982fe4e02896b5144e107c143.jpg",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Padel Court",
+      "Tennis Court",
+      "Basketball Court",
+      "Kids Play Area",
+      "Kids Day Care",
+      "Supermarket"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "price": ""
+  },
+  {
+    "name": "Meral Oasis Resort And Compound  - Taif",
+    "slug": "meral-oasis-taif-579",
+    "city": "Taif",
+    "city_slug": "taif",
+    "url": "https://rightcompound.com/compounds/taif/meral-oasis-taif-579",
+    "description": "The Tranquil Oasis Nestled within Taif, Meral Oasis for Hotel Villas is a hidden gem waiting to be discovered by families seeking a peaceful getaway amidst n...",
+    "image_url": "https://rightcompoundimages.blob.core.windows.net/images/Common/Images/Compound/579/5ff01db53c214dbba577062376823198.png",
+    "amenities": [
+      "Swimming Pool",
+      "Gym",
+      "Supermarket",
+      "Restaurant",
+      "Mosque",
+      "Parking",
+      "Maintenance",
+      "Housekeeping"
+    ],
+    "bedrooms": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "price": ""
+  }
+]
