@@ -41,6 +41,8 @@ FB_PAGES = [
     {"name": "Expatsinksa",      "id": os.environ.get("FB_PAGE_ID_EXPATS", ""), "token": os.environ.get("FB_PAGE_TOKEN_EXPATS", "")},
 ]
 
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
+
 GRAPH_BASE = "https://graph.facebook.com/v21.0"
 BASE_URL   = "https://rightcompound.com"
 HEADERS    = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
@@ -348,11 +350,51 @@ def build_compound_post(compound: dict) -> str:
     return "\n".join(lines)
 
 
+def generate_blog_hook(title: str, article_text: str = "") -> str:
+    """Generate a topic-specific hook for a blog article using OpenAI."""
+    if not OPENAI_API_KEY:
+        return random.choice(BLOG_HOOKS)
+    try:
+        context = f"Article title: {title}"
+        if article_text:
+            context += f"\nArticle summary: {article_text[:400]}"
+        prompt = (
+            f"{context}\n\n"
+            "Write a single short punchy social media hook (1-2 sentences max) for this article. "
+            "The hook must be directly relevant to the specific article topic. "
+            "Do not use generic phrases like 'everything you need to know' or 'this guide'. "
+            "Do not use dashes or em dashes anywhere in the text. "
+            "Write in a genuine human tone. "
+            "Do not include hashtags, quotes, or the article title itself. "
+            "Just the hook sentence only."
+        )
+        resp = requests.post(
+            "https://api.openai.com/v1/chat/completions",
+            headers={"Authorization": f"Bearer {OPENAI_API_KEY}", "Content-Type": "application/json"},
+            json={
+                "model": "gpt-4.1-mini",
+                "messages": [{"role": "user", "content": prompt}],
+                "max_tokens": 80,
+                "temperature": 0.8,
+            },
+            timeout=15,
+        )
+        if resp.status_code == 200:
+            hook = resp.json()["choices"][0]["message"]["content"].strip().strip('"\'')
+            hook = hook.replace(" - ", " ").replace(" -- ", " ").replace("\u2014", " ").replace("\u2013", " ")
+            logging.info(f"[HOOK] Generated for '{title[:50]}': {hook}")
+            return hook
+    except Exception as e:
+        logging.warning(f"[HOOK] OpenAI failed: {e}")
+    return random.choice(BLOG_HOOKS)
+
+
 def build_blog_post(article: dict) -> str:
     title = article.get("title", "")
     url = article.get("url", "")
+    article_text = article.get("description", "")
 
-    hook = random.choice(BLOG_HOOKS)
+    hook = generate_blog_hook(title, article_text)
 
     lines = [hook, ""]
     lines.append(f"{title}")
