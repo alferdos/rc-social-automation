@@ -10,6 +10,14 @@ Timer Triggers (Riyadh UTC+3):
   new_compound_check    → 12:00 Riyadh = 09:00 UTC  (cron: 0 0 9 * * *)
   daily_blog_post       → 15:00 Riyadh = 12:00 UTC  (cron: 0 0 12 * * *)
   new_blog_check        → 18:00 Riyadh = 15:00 UTC  (cron: 0 0 15 * * *)
+
+Deduplication strategy:
+  - posted_blog_urls: canonical set of ALL blog URLs ever posted (by any function)
+  - blog_queue: articles queued for daily posting; cross-checked against posted_blog_urls on enqueue
+  - known_blog_urls: all URLs seen on the blog page (to detect truly new articles)
+  - new_blog_check only posts articles absent from BOTH known_blog_urls AND posted_blog_urls
+  - daily_blog_post double-checks the article URL against posted_blog_urls before posting
+  - State is saved BEFORE posting to prevent re-posting on retry/cold-start
 """
 
 import azure.functions as func
@@ -221,12 +229,15 @@ def scrape_blog_articles() -> list:
         resp = requests.get(f"{BASE_URL}/blog", headers=HEADERS, timeout=30)
         soup = BeautifulSoup(resp.text, "html.parser")
         articles = []
+        seen_urls = set()
         for a in soup.find_all("a", href=True):
             href = a["href"]
             if "/blog/article/" in href:
                 full = BASE_URL + href if not href.startswith("http") else href
-                if full not in [x["url"] for x in articles]:
-                    # Get title from OG or h1
+                # Normalise URL: strip trailing slash and query params
+                full = full.rstrip("/").split("?")[0]
+                if full not in seen_urls:
+                    seen_urls.add(full)
                     title = a.get_text(strip=True)[:100]
                     articles.append({"url": full, "title": title})
         return articles
@@ -256,7 +267,7 @@ def post_to_x(text: str, image_url: str = "") -> str | None:
         from requests_oauthlib import OAuth1Session
         oauth = OAuth1Session(
             X_API_KEY, X_API_SECRET,
-            X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET
+            X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET,
         )
 
         media_id = None
@@ -406,6 +417,11 @@ def build_blog_post(article: dict) -> str:
     return "\n".join(lines)
 
 
+def _normalise_url(url: str) -> str:
+    """Normalise a URL for deduplication: strip trailing slash and query params."""
+    return url.rstrip("/").split("?")[0]
+
+
 # ============================================================
 # TIMER TRIGGER 1: Daily Compound Post — 9:00 AM Riyadh (06:00 UTC)
 # ============================================================
@@ -432,6 +448,13 @@ def daily_compound_post(timer: func.TimerRequest) -> None:
     posted_slugs = state.get("posted_compound_slugs", [])
     rotation_index = state.get("compound_rotation_index", 0)
 
+    # FIX: Guard against last_compound_post_date being today — prevents double-run on cold start
+    last_post_date = state.get("last_compound_post_date", "")
+    today_riyadh = datetime.now(RIYADH_TZ).strftime("%Y-%m-%d")
+    if last_post_date and last_post_date.startswith(today_riyadh):
+        logging.warning(f"[COMPOUND POST] Already posted today ({last_post_date}). Skipping.")
+        return
+
     # Pick next compound in rotation (skip already posted in this cycle)
     if rotation_index >= len(compounds):
         # Full cycle complete, reset
@@ -453,6 +476,13 @@ def daily_compound_post(timer: func.TimerRequest) -> None:
     text = build_compound_post(compound)
     image_url = compound.get("image_url", "")
 
+    # FIX: Save state BEFORE posting to prevent re-posting on retry/cold-start
+    posted_slugs.append(compound.get("slug", ""))
+    state["posted_compound_slugs"] = posted_slugs
+    state["compound_rotation_index"] = rotation_index
+    state["last_compound_post_date"] = datetime.now(timezone.utc).isoformat()
+    save_state(state)
+
     # Post to X
     x_url = post_to_x(text, image_url)
     if x_url:
@@ -462,13 +492,6 @@ def daily_compound_post(timer: func.TimerRequest) -> None:
 
     # Post to Facebook
     fb_results = post_to_facebook(text, image_url)
-
-    # Update state
-    posted_slugs.append(compound.get("slug", ""))
-    state["posted_compound_slugs"] = posted_slugs
-    state["compound_rotation_index"] = rotation_index
-    state["last_compound_post"] = now_riyadh
-    save_state(state)
 
     logging.info(f"[COMPOUND POST] Done. X={'OK' if x_url else 'FAIL'}, FB={sum(1 for v in fb_results.values() if v)}/{len(fb_results)} pages")
 
@@ -500,6 +523,10 @@ def new_compound_check(timer: func.TimerRequest) -> None:
 
     logging.info(f"[COMPOUND CHECK] Found {len(new_urls)} new compounds")
 
+    # FIX: Update known URLs immediately to prevent re-posting on retry
+    state["known_compound_urls"] = list(known_urls | set(current_urls))
+    save_state(state)
+
     for url in new_urls:
         compound = scrape_compound(url)
         if not compound:
@@ -523,9 +550,6 @@ def new_compound_check(timer: func.TimerRequest) -> None:
 
         time.sleep(2)
 
-    state["known_compound_urls"] = list(known_urls | set(current_urls))
-    save_state(state)
-
 
 # ============================================================
 # TIMER TRIGGER 3: Daily Blog Post — 3:00 PM Riyadh (12:00 UTC)
@@ -544,13 +568,32 @@ def daily_blog_post(timer: func.TimerRequest) -> None:
         logging.warning("Timer is past due — running anyway")
 
     state = load_state()
+
+    # FIX: Guard against double-run on same day (cold start / past_due retry)
+    last_blog_post = state.get("last_blog_post_date", "")
+    today_riyadh = datetime.now(RIYADH_TZ).strftime("%Y-%m-%d")
+    if last_blog_post and last_blog_post.startswith(today_riyadh):
+        logging.warning(f"[BLOG POST] Already posted today ({last_blog_post}). Skipping.")
+        return
+
     blog_queue = state.get("blog_queue", [])
+    posted_blog_urls = set(state.get("posted_blog_urls", []))
 
     if not blog_queue:
         logging.info("[BLOG POST] Queue is empty, nothing to post today")
         return
 
+    # FIX: Pop the article and cross-check against posted_blog_urls before posting
     article = blog_queue.pop(0)
+    article_url = _normalise_url(article["url"])
+
+    if article_url in posted_blog_urls:
+        logging.warning(f"[BLOG POST] Article already posted, skipping: {article_url}")
+        # Save updated queue (article removed) and continue
+        state["blog_queue"] = blog_queue
+        save_state(state)
+        return
+
     logging.info(f"[BLOG POST] Posting: {article.get('title')} | Queue remaining: {len(blog_queue)}")
 
     # Get OG image
@@ -560,6 +603,13 @@ def daily_blog_post(timer: func.TimerRequest) -> None:
 
     text = build_blog_post(article)
 
+    # FIX: Save state BEFORE posting to prevent re-posting on retry/cold-start
+    posted_blog_urls.add(article_url)
+    state["posted_blog_urls"] = list(posted_blog_urls)
+    state["blog_queue"] = blog_queue
+    state["last_blog_post_date"] = datetime.now(timezone.utc).isoformat()
+    save_state(state)
+
     x_url = post_to_x(text, image_url)
     if x_url:
         logging.info(f"[BLOG POST] X posted: {x_url}")
@@ -567,14 +617,6 @@ def daily_blog_post(timer: func.TimerRequest) -> None:
         logging.error("[BLOG POST] X post failed")
 
     fb_results = post_to_facebook(text, image_url)
-
-    # Update state
-    posted_urls = state.get("posted_blog_urls", [])
-    posted_urls.append(article["url"])
-    state["posted_blog_urls"] = posted_urls
-    state["blog_queue"] = blog_queue
-    state["last_blog_post"] = now_riyadh
-    save_state(state)
 
     logging.info(f"[BLOG POST] Done. X={'OK' if x_url else 'FAIL'}, FB={sum(1 for v in fb_results.values() if v)}/{len(fb_results)} pages")
 
@@ -593,22 +635,35 @@ def new_blog_check(timer: func.TimerRequest) -> None:
     logging.info(f"[BLOG CHECK] Triggered at {now_riyadh}")
 
     state = load_state()
-    known_blog_urls = set(state.get("known_blog_urls", []))
-    posted_blog_urls = set(state.get("posted_blog_urls", []))
+    known_blog_urls = set(_normalise_url(u) for u in state.get("known_blog_urls", []))
+    posted_blog_urls = set(_normalise_url(u) for u in state.get("posted_blog_urls", []))
 
     articles = scrape_blog_articles()
-    new_articles = [a for a in articles if a["url"] not in known_blog_urls and a["url"] not in posted_blog_urls]
+
+    # FIX: Normalise scraped URLs before comparison
+    new_articles = [
+        a for a in articles
+        if _normalise_url(a["url"]) not in known_blog_urls
+        and _normalise_url(a["url"]) not in posted_blog_urls
+    ]
 
     if not new_articles:
         logging.info("[BLOG CHECK] No new articles found")
-        state["known_blog_urls"] = list(known_blog_urls | {a["url"] for a in articles})
+        state["known_blog_urls"] = list(known_blog_urls | {_normalise_url(a["url"]) for a in articles})
         save_state(state)
         return
 
     logging.info(f"[BLOG CHECK] Found {len(new_articles)} new articles")
 
+    # FIX: Update known_blog_urls and posted_blog_urls BEFORE posting to prevent retry duplicates
     for article in new_articles:
-        # Get clean title from OG
+        posted_blog_urls.add(_normalise_url(article["url"]))
+    state["known_blog_urls"] = list(known_blog_urls | {_normalise_url(a["url"]) for a in articles})
+    state["posted_blog_urls"] = list(posted_blog_urls)
+    save_state(state)
+
+    for article in new_articles:
+        # Get clean title and image from OG
         try:
             from bs4 import BeautifulSoup
             resp = requests.get(article["url"], headers=HEADERS, timeout=20)
@@ -630,9 +685,4 @@ def new_blog_check(timer: func.TimerRequest) -> None:
         fb_results = post_to_facebook(text, image_url)
         logging.info(f"[BLOG CHECK] FB posted to {sum(1 for v in fb_results.values() if v)}/{len(fb_results)} pages")
 
-        posted_blog_urls.add(article["url"])
         time.sleep(2)
-
-    state["known_blog_urls"] = list(known_blog_urls | {a["url"] for a in articles})
-    state["posted_blog_urls"] = list(posted_blog_urls)
-    save_state(state)
