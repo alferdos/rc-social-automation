@@ -455,12 +455,23 @@ def daily_compound_post(timer: func.TimerRequest) -> None:
         logging.warning(f"[COMPOUND POST] Already posted today ({last_post_date}). Skipping.")
         return
 
-    # Pick next compound in rotation (skip already posted in this cycle)
+    # FIX: Use slug-based deduplication — skip any compound whose slug is already in posted_slugs
     if rotation_index >= len(compounds):
         # Full cycle complete, reset
         rotation_index = 0
         posted_slugs = []
         logging.info("[COMPOUND POST] Full rotation complete, resetting cycle")
+
+    # Advance past any already-posted slugs
+    while rotation_index < len(compounds) and compounds[rotation_index].get("slug", "") in posted_slugs:
+        logging.info(f"[COMPOUND POST] Skipping already-posted slug: {compounds[rotation_index].get('slug')}")
+        rotation_index += 1
+
+    if rotation_index >= len(compounds):
+        # All compounds posted — reset cycle
+        rotation_index = 0
+        posted_slugs = []
+        logging.info("[COMPOUND POST] All compounds posted, resetting cycle")
 
     compound = compounds[rotation_index]
     rotation_index += 1
