@@ -448,10 +448,11 @@ def daily_compound_post(timer: func.TimerRequest) -> None:
     posted_slugs = state.get("posted_compound_slugs", [])
     rotation_index = state.get("compound_rotation_index", 0)
 
-    # FIX: Guard against last_compound_post_date being today — prevents double-run on cold start
-    last_post_date = state.get("last_compound_post_date", "")
+    # FIX: Guard against double-run on same Riyadh calendar day
+    # Store and compare as Riyadh date string (YYYY-MM-DD) to avoid UTC vs Riyadh mismatch
     today_riyadh = datetime.now(RIYADH_TZ).strftime("%Y-%m-%d")
-    if last_post_date and last_post_date.startswith(today_riyadh):
+    last_post_date = state.get("last_compound_post_date", "")
+    if last_post_date == today_riyadh:
         logging.warning(f"[COMPOUND POST] Already posted today ({last_post_date}). Skipping.")
         return
 
@@ -491,7 +492,7 @@ def daily_compound_post(timer: func.TimerRequest) -> None:
     posted_slugs.append(compound.get("slug", ""))
     state["posted_compound_slugs"] = posted_slugs
     state["compound_rotation_index"] = rotation_index
-    state["last_compound_post_date"] = datetime.now(timezone.utc).isoformat()
+    state["last_compound_post_date"] = today_riyadh  # Store Riyadh date string for consistent comparison
     save_state(state)
 
     # Post to X
@@ -580,10 +581,10 @@ def daily_blog_post(timer: func.TimerRequest) -> None:
 
     state = load_state()
 
-    # FIX: Guard against double-run on same day (cold start / past_due retry)
-    last_blog_post = state.get("last_blog_post_date", "")
+    # FIX: Guard against double-run on same Riyadh calendar day
     today_riyadh = datetime.now(RIYADH_TZ).strftime("%Y-%m-%d")
-    if last_blog_post and last_blog_post.startswith(today_riyadh):
+    last_blog_post = state.get("last_blog_post_date", "")
+    if last_blog_post == today_riyadh:
         logging.warning(f"[BLOG POST] Already posted today ({last_blog_post}). Skipping.")
         return
 
@@ -618,7 +619,7 @@ def daily_blog_post(timer: func.TimerRequest) -> None:
     posted_blog_urls.add(article_url)
     state["posted_blog_urls"] = list(posted_blog_urls)
     state["blog_queue"] = blog_queue
-    state["last_blog_post_date"] = datetime.now(timezone.utc).isoformat()
+    state["last_blog_post_date"] = today_riyadh  # Store Riyadh date string for consistent comparison
     save_state(state)
 
     x_url = post_to_x(text, image_url)
